@@ -4,7 +4,9 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
   return (
     <section className="w-full max-w-full flex-start flex-col">
       <h1 className="head_text text-left">
-        <span className="blue_gradient">{type} Post</span>
+        <span className="" style={{ color: "skyblue" }}>
+          {type} Post
+        </span>
       </h1>
       <p className="desc text-left max-w-md">
         {type} and share amazing prompts with the world, and let your
@@ -54,7 +56,7 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
           <button
             type="submit"
             disabled={submitting}
-            className="px-5 py-1.5 text-sm bg-primary-orange rounded-full text-white"
+            className="px-5 py-1.5 text-sm bg-cyan-400 rounded-full text-white"
           >
             {submitting ? `${type}ing...` : type}
           </button>

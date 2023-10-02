@@ -2,9 +2,10 @@ import "@styles/globals.css";
 
 import Nav from "@components/Nav";
 import Provider from "@components/Provider";
+import { Footer } from "@components/Footer";
 
 export const metadata = {
-  title: "Prompt",
+  title: "EZprompt",
   description: "Discover & Share AI Prompts",
 };
 
@@ -14,12 +15,13 @@ const Rootlayout = ({ children }) => {
       <body>
         <Provider>
           <div className="main">
-            <div className="gradient" />
+            <div className="" />
           </div>
 
           <main className="app">
             <Nav />
             {children}
+            <Footer />
           </main>
         </Provider>
       </body>
