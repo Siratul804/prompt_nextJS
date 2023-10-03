@@ -7,6 +7,7 @@ import { Footer } from "@components/Footer";
 export const metadata = {
   title: "EZprompt",
   description: "Discover & Share AI Prompts",
+  image: "/assets/images/meta.PNG",
 };
 
 const Rootlayout = ({ children }) => {
