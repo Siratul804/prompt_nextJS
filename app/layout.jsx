@@ -15,15 +15,11 @@ const Rootlayout = ({ children }) => {
     <html lang="en">
       <body>
         <Provider>
-          <div className="main">
-            <div className="" />
-          </div>
-
           <main className="app">
             <Nav />
             {children}
-            <Footer />
           </main>
+          <Footer />
         </Provider>
       </body>
     </html>
