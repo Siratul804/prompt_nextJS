@@ -5,10 +5,10 @@ import { useState, useEffect } from "react";
 import { signIn, signOut, useSession, getProviders } from "next-auth/react";
 
 const Nav = () => {
-  const { data: session } = useSession();
-
+  const { data: session, status } = useSession();
   const [providers, setProviders] = useState(null);
   const [toggleDropdown, setToggleDropdown] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const setUpProviders = async () => {
@@ -18,9 +18,20 @@ const Nav = () => {
     setUpProviders();
   }, []);
 
+  const handleSignIn = async (providerId) => {
+    setLoading(true);
+    await signIn(providerId, { callbackUrl: process.env.NEXT_PUBLIC_BASE_URL });
+    setLoading(false);
+  };
+
+  const handleSignOut = async () => {
+    await signOut();
+    alert("Successfully loging out!"); // Add an alert after signing out
+  };
+
   return (
-    <nav className="flex-between w-full mb-16 pt-3  ">
-      <Link href="/" className="flex gap-2 flex-center ">
+    <nav className="flex-between w-full mb-16 pt-3">
+      <Link href="/" className="flex gap-2 flex-center">
         <p className="logo_text">
           <span style={{ color: "skyblue" }}>EZ</span>Prompt
         </p>
@@ -33,7 +44,11 @@ const Nav = () => {
             <Link href="/create-prompt" className="black_btn">
               Create Prompt
             </Link>
-            <button className="outline_btn" type="button" onClick={signOut}>
+            <button
+              className="outline_btn"
+              type="button"
+              onClick={handleSignOut}
+            >
               Sign Out
             </button>
 
@@ -54,16 +69,17 @@ const Nav = () => {
                 <button
                   type="button"
                   key={provider.name}
-                  onClick={() => signIn(provider.id)}
+                  onClick={() => handleSignIn(provider.id)}
                   className="black_btn"
+                  disabled={loading}
                 >
-                  Sign In
+                  {loading ? "Signing In..." : "Sign In"}
                 </button>
               ))}
           </>
         )}
       </div>
-      {/* Mobaile Navigation */}
+      {/* Mobile Navigation */}
       <div className="sm:hidden flex relative">
         {session?.user ? (
           <div className="flex">
@@ -94,10 +110,7 @@ const Nav = () => {
                   </Link>
                   <button
                     type="button"
-                    onClick={() => {
-                      setToggleDropdown(false);
-                      signOut();
-                    }}
+                    onClick={handleSignOut}
                     className="mt-5 w-full black_btn"
                   >
                     Sign Out
@@ -113,10 +126,11 @@ const Nav = () => {
                 <button
                   type="button"
                   key={provider.name}
-                  onClick={() => signIn(provider.id)}
+                  onClick={() => handleSignIn(provider.id)}
                   className="black_btn"
+                  disabled={loading}
                 >
-                  Sign In
+                  {loading ? "Signing In..." : "Sign In"}
                 </button>
               ))}
           </>

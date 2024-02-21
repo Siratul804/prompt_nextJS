@@ -18,7 +18,132 @@
   pointer-events: none;
 }
 
+/* //footer// */
+.container {
+  padding: 5px 300px;
+}
+.row {
+  display: flex;
+}
+.logo-section {
+  margin-right: 250px;
+  margin-left: 5px;
+  margin-top: 10px;
+}
+.logo-section > p {
+  font-size: 18px;
+  text-align: left;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.created-by-section .border-bottom {
+  background-color: skyblue;
+  height: 3px;
+  width: 70px;
+  margin-top: -5px;
+}
+.created-by-first {
+  margin-right: 80px;
+}
+.upper-section {
+  height: 80vh;
+  /* background-color: red; */
+}
+.lower-section {
+  /* height: 200px; */
+  background-color: #f6f8fa;
+}
+.lower-section-text {
+  color: skyblue;
+  font-weight: bold;
+  font-size: larger;
+}
 
+.created-by-first > h3 {
+  font-weight: bold;
+}
+
+.created-by-first > p {
+  font-size: 10px;
+  font-style: italic;
+}
+
+.social-icons {
+  padding: 15px 0px 0px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.social-icons a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.4rem;
+  margin: 0 5px;
+}
+.logo-section p {
+  width: 320px;
+}
+.lower-hr hr {
+  margin-top: 20px;
+}
+.copyright {
+  text-align: center;
+  padding-top: 5px;
+  font-family: initial;
+  font-size: large;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    padding-left: 0px !important;
+    /* padding-right: 0px !important; */
+  }
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+  .created-by-section {
+    /* margin-left: 50px; */
+    width: 100%;
+    margin-top: 10px;
+  }
+  .logo-section {
+    padding-left: 20px;
+  }
+  .logo-section p {
+    width: 85%;
+  }
+
+  .lower-section {
+    width: 100%;
+    background-color: #f6f8fa;
+  }
+  .lower-hr hr {
+    margin-top: 30px;
+    margin-left: 50px !important;
+    /* margin-right: 20px !important; */
+  }
+  .copyright {
+    text-align: center;
+    padding-left: 50px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .container {
+    padding: 20px 60px;
+  }
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+  .created-by-section {
+    margin-left: 50px;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .logo-section {
+    width: 100%;
+  }
+}
 
 .main:before {
   background: radial-gradient(circle, rgba(97, 95, 139, 0) 0, #fafafa 100%);

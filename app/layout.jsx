@@ -15,7 +15,7 @@ const Rootlayout = ({ children }) => {
     <html lang="en">
       <body>
         <Provider>
-          <main className="app">
+          <main className="app py-5 ">
             <Nav />
             {children}
           </main>
