@@ -20,20 +20,19 @@
 
 /* //footer// */
 .container {
-  padding: 5px 300px;
+  padding: 5px 80px;
 }
 .row {
   display: flex;
 }
 .logo-section {
-  margin-right: 250px;
-  margin-left: 5px;
+  margin-right: 400px;
+  margin-left: 35px;
   margin-top: 10px;
 }
 .logo-section > p {
-  font-size: 18px;
+  font-size: 15px;
   text-align: left;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 .created-by-section .border-bottom {
   background-color: skyblue;
@@ -55,7 +54,7 @@
 .lower-section-text {
   color: skyblue;
   font-weight: bold;
-  font-size: larger;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .created-by-first > h3 {
@@ -81,8 +80,9 @@
 .logo-section p {
   width: 320px;
 }
-.lower-hr hr {
-  margin-top: 20px;
+.lower-hr {
+  border: solid 1px black;
+  width: 195vh;
 }
 .copyright {
   text-align: center;
@@ -116,11 +116,15 @@
     width: 100%;
     background-color: #f6f8fa;
   }
-  .lower-hr hr {
-    margin-top: 30px;
-    margin-left: 50px !important;
-    /* margin-right: 20px !important; */
+  .lower-hr {
+    border: solid 1px black;
+    width: 45vh;
   }
+
+  .border_box {
+    padding-left: 15px;
+  }
+
   .copyright {
     text-align: center;
     padding-left: 50px;
@@ -272,7 +276,7 @@
 
 /* PromptCard Component */
 .prompt_card {
-  @apply flex-1 break-inside-avoid rounded-lg border border-gray-300 bg-white/20 bg-clip-padding p-6 pb-4 backdrop-blur-lg backdrop-filter md:w-[360px] w-full h-fit;
+  @apply flex-1 break-inside-avoid rounded-lg border border-gray-300 bg-white/20 bg-clip-padding p-6 pb-4 backdrop-blur-lg backdrop-filter md:w-[360px] h-[250px] w-full;
 }
 
 .flex-center {

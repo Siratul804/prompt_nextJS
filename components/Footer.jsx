@@ -8,8 +8,8 @@ export const Footer = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-5 mt-1 logo-section">
-              <h2 className="pb-4">
-                <span className="lower-section-text">EZ</span>prompt
+              <h2 className="pb-4 text-[22px] font-bold">
+                <span className="lower-section-text">EZ</span>PROMPT
               </h2>
               <p>
                 Join our vibrant community of creators and share your responses
@@ -19,9 +19,9 @@ export const Footer = () => {
             </div>
 
             <div className="created-by-section">
-              <h2 className="py-3">Created by</h2>
+              <h2 className="py-3 text-[18px] ">Created by</h2>
               <div className="border-bottom  "></div>
-              <div className="created-by py-3 ">
+              <div className="created-by py-3 flex ">
                 <div className="created-by-first">
                   <h3>Siratul Islam</h3>
                   <p>Software Developer</p>
@@ -62,10 +62,10 @@ export const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="lower-hr">
-            <hr />
+          <div className=" border_box py-5 ">
+            <div className="lower-hr"></div>
           </div>
-          <div className="copyright">
+          <div className="copyright  py-5  ">
             <p>
               Copyright <span>©</span> PromptSquad | All rights reserved
             </p>
