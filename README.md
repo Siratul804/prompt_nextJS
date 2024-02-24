@@ -28,6 +28,7 @@ https://ezprompt.vercel.app/
 ## Tech Stack
 
 **Client:** Next.js, React, TailwindCSS, React-icons.
+**Server:** Next.js, Node.js, MongoDB, NextAuth.
 
 
 
